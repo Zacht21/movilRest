@@ -19,13 +19,21 @@ public class Usuarios extends CRUD {
         render(usuarios);
     }
 
-    /*public static String login(String usuario, String password){
+    public static void blank(){
+        Usuario usuario = new Usuario("qwe", "qwe", "qwe@qwe.com", "qwe");
+        usuario.validateAndSave();
+        render();
+    }
+
+    public static void usersJson(String id){
         try {
-            Usuario user = Usuario.find("usuario, password", usuario, password).first();
-            return user.nombre;
+            Usuario user = Usuario.find("usuario", id).first();
+            if (user.equals(null)){
+                notFound();
+            }
+            renderJSON(user);
         }catch (Exception e){
-            render();
+            notFound();
         }
-        return
-    }*/
+    }
 }

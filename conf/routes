@@ -7,6 +7,7 @@ GET     /                                       Application.index
 
 GET     /usuarios/list                          Usuarios.list
 GET     /usuarios/blank                         Usuarios.blank
+GET     /usuarios/filter/{id}                   Usuarios.usersJson
 
 
 # Ignore favicon requests
