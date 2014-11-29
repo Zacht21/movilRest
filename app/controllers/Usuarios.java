@@ -1,7 +1,6 @@
 package controllers;
 
 import models.Usuario;
-import play.db.jpa.Model;
 import play.modules.paginate.ValuePaginator;
 
 import java.util.List;
@@ -19,13 +18,17 @@ public class Usuarios extends CRUD {
         render(usuarios);
     }
 
-    /*public static String login(String usuario, String password){
-        try {
-            Usuario user = Usuario.find("usuario, password", usuario, password).first();
-            return user.nombre;
-        }catch (Exception e){
-            render();
-        }
-        return
-    }*/
+    public static void registrar(){
+            Usuario usuario = new Usuario(
+                    params.get("name"),
+                    params.get("usuario"),
+                    params.get("email"),
+                    params.get("password")
+            );
+            if(usuario.validateAndSave()){
+                renderJSON(usuario);
+            } else {
+                renderJSON(-1);
+            }
+    }
 }

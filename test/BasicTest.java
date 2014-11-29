@@ -1,7 +1,6 @@
-import org.junit.*;
-import java.util.*;
-import play.test.*;
-import models.*;
+import models.Usuario;
+import org.junit.Test;
+import play.test.UnitTest;
 
 public class BasicTest extends UnitTest {
 
