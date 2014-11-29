@@ -2,6 +2,7 @@ package models;
 
 import com.google.code.morphia.annotations.Entity;
 import play.data.validation.Required;
+import play.data.validation.Unique;
 import play.modules.morphia.Model;
 
 /**
@@ -11,10 +12,12 @@ import play.modules.morphia.Model;
 @Entity
 public class Usuario extends Model {
     @Required
+    @Unique
     public String usuario;
     @Required
     public String nombre;
     @Required
+    @Unique
     public String email;
     @Required
     public String password;
@@ -25,4 +28,5 @@ public class Usuario extends Model {
         this.email = email;
         this.password = password;
     }
+
 }

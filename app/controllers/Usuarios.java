@@ -18,17 +18,17 @@ public class Usuarios extends CRUD {
         render(usuarios);
     }
 
-    public static void registrar(){
-            Usuario usuario = new Usuario(
-                    params.get("name"),
-                    params.get("usuario"),
-                    params.get("email"),
-                    params.get("password")
-            );
-            if(usuario.validateAndSave()){
-                renderJSON(usuario);
-            } else {
-                renderJSON(-1);
-            }
+    public static void registrar() {
+        Usuario usuario = new Usuario(
+                params.get("name"),
+                params.get("usuario"),
+                params.get("email"),
+                params.get("password")
+        );
+        if (usuario.validateAndSave()) {
+            renderJSON(usuario);
+        } else {
+            renderJSON(-1);
+        }
     }
 }

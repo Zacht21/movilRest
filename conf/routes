@@ -7,7 +7,7 @@ GET     /                                       Application.index
 
 GET     /usuarios/list                          Usuarios.list
 GET     /usuarios/blank                         Usuarios.blank
-POST    /postjson                               Usuarios.registrar
+GET     /postjson                               Usuarios.registrar
 
 
 # Ignore favicon requests
