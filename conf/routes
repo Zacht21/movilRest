@@ -8,6 +8,7 @@ GET     /                                       Application.index
 GET     /usuarios/list                          Usuarios.list
 GET     /usuarios/blank                         Usuarios.blank
 GET     /postjson                               Usuarios.registrar
+GET     /brutforce/                             BruteForces.ninjaStorm
 
 
 # Ignore favicon requests
